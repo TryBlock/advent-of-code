@@ -16,12 +16,10 @@ const part1 = (rawInput: string) => {
     const smallestLeft = Math.min(...leftCopy);
     const smallestRight = Math.min(...rightCopy);
 
-    const difference = calcDifference(smallestLeft, smallestRight);
-
     leftCopy.splice(leftCopy.indexOf(smallestLeft), 1);
     rightCopy.splice(rightCopy.indexOf(smallestRight), 1);
 
-    sum += difference;
+    sum += calcDifference(smallestLeft, smallestRight);
   }
 
   return sum;
