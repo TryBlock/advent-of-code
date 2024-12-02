@@ -29,3 +29,5 @@
  *     import { myUtil } from '../utils'
  *
  */
+
+export const getLines = (input: string) => input.split("\n");
